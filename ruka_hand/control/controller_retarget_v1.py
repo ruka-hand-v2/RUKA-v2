@@ -23,7 +23,7 @@ def apply_offset(pos, orn, offset):
     return pos + world_offset
 
 class DexRukav2Handler:
-    def __init__(self, urdf_path="/Users/sissi/Downloads/RUKA/assets_v1/Hand_Assembly_URDF.urdf", config_path="/Users/sissi/Downloads/RUKA/assets/dex_retarget_v1.yml", hand_type="v1_right"):
+    def __init__(self, urdf_path="/your-repo-path/assets/robot.urdf", config_path="/your-repo-path/assets/dex_retarget.yml", hand_type="v1_right"):
         with open(config_path, "r") as f:
             self.config = yaml.safe_load(f)
         self.hand_type = hand_type

@@ -23,7 +23,7 @@ def apply_offset(pos, orn, offset):
     return pos + world_offset
 
 class DexRukav2HandlerLeft:
-    def __init__(self, urdf_path="/home_shared/grail_sissi/bimanual/Franka-Teach/RUKA/assets/robot.urdf", config_path="/home_shared/grail_sissi/bimanual/Franka-Teach/RUKA/assets/dex_retarget.yml", hand_type="left"):
+    def __init__(self, urdf_path="/your-repo-path/assets/robot.urdf", config_path="/your-repo-path/assets/dex_retarget.yml", hand_type="left"):
         with open(config_path, "r") as f:
             self.config = yaml.safe_load(f)
         self.hand_type = hand_type
