@@ -1,0 +1,7 @@
+{
+    "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+    "urdf-visualizer.packages": {
+        // MAPPING: "package name" : "path to package root FOLDER"
+        "assets": ""
+    }
+}

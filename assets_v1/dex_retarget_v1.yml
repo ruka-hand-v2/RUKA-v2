@@ -1,0 +1,41 @@
+retargeting:
+  type: vector 
+  urdf_path: "/home_shared/grail_sissi/BAKU/baku/vr-hand-tracking/Franka-Teach/RUKA/assets_v1/Hand_Assembly_URDF.urdf" #"/home_shared/grail_sissi/BAKU/baku/vr-hand-tracking/Franka-Teach/RUKA/assets_v1/Hand_Assembly_URDF.urdf" # /Users/sissi/Downloads/RUKA/assets_v1/Hand_Assembly_URDF.urdf  
+  low_pass_alpha: 1.0
+  target_origin_link_names:
+    - "Thumb_MCP_Link"
+    - "Index_MCP_Link"
+    - "Middle_MCP_Link"
+    - "Ring_MCP_Link"
+    - "Pinky_MCP_Link"
+    - "Palm"
+    - "Index_MCP_Link"
+    - "Middle_MCP_Link"
+    - "Ring_MCP_Link"
+    - "Pinky_MCP_Link"
+    - "thumb_actual_tip"
+    - "thumb_actual_tip"
+    - "thumb_actual_tip"
+    - "thumb_actual_tip"
+  target_task_link_names:
+    - "Thumb_PIP_Link"
+    - "Index_PIP_Link"
+    - "Middle_PIP_Link"
+    - "Ring_PIP_Link"
+    - "Pinky_PIP_Link"
+    - "Thumb_DIP_Link"
+    - "Index_DIP_Link"
+    - "Middle_DIP_Link"
+    - "Ring_DIP_Link"
+    - "Pinky_DIP_Link"
+    - "index_actual_tip"
+    - "middle_actual_tip"
+    - "ring_actual_tip"
+    - "pinky_actual_tip"
+  # MediaPipe indices
+  target_link_human_indices:
+    - [2, 5, 9, 13, 17, 0, 5, 9, 13, 17, 4, 4, 4, 4]
+    - [4, 8, 12, 16, 20, 3, 6, 10, 14, 18, 8, 12, 16, 20]
+oculus_indices:
+  - [[0, 2], [1, 1], [2, 1], [3, 1], [4, 1], [0, 0], [1, 1], [2, 1], [3, 1], [4, 1], [0, 4], [0, 4], [0, 4], [0, 4]]
+  - [[0, 4], [1, 4], [2, 4], [3, 4], [4, 4], [0, 3], [1, 2], [2, 2], [3, 2], [4, 2], [1, 4], [2, 4], [3, 4], [4, 4]]

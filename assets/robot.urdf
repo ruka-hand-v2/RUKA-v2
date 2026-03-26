@@ -1,0 +1,1006 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape https://cad.onshape.com/documents/59040ba514e65eea2b4930b4/w/888a0bf0536dace5ae45ae11/e/e63b444e9d421004a621f462 -->
+<robot name="folderv2">
+  <!-- Link base_new -->
+  <link name="base_new">
+    <inertial>
+      <origin xyz="-0.0029519 -0.0313554 0.00805561" rpy="0 0 0"/>
+      <mass value="0.003"/>
+      <inertia ixx="2.12608e-06" ixy="-1.33485e-08" ixz="-1.73878e-08" iyy="3.12604e-06" iyz="-5.94787e-08" izz="4.1914e-06"/>
+    </inertial>
+    <!-- Part low_ball -->
+    <visual>
+      <origin xyz="-0.00216402 -0.0382359 -0.00282698" rpy="1.5708 5.57513e-31 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/low_ball.stl"/>
+      </geometry>
+      <material name="low_ball_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00216402 -0.0382359 -0.00282698" rpy="1.5708 5.57513e-31 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/low_ball.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part base_new -->
+    <visual>
+      <origin xyz="-0.00216402 -0.0382359 -0.00282698" rpy="1.5708 -9.84535e-31 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/base_new.stl"/>
+      </geometry>
+      <material name="base_new_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00216402 -0.0382359 -0.00282698" rpy="1.5708 -9.84535e-31 3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/base_new.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part bearing_plate -->
+    <visual>
+      <origin xyz="-0.00216402 -0.0382359 -0.00282698" rpy="1.5708 1.99381e-30 -3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/bearing_plate.stl"/>
+      </geometry>
+      <material name="bearing_plate_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00216402 -0.0382359 -0.00282698" rpy="1.5708 1.99381e-30 -3.14159"/>
+      <geometry>
+        <mesh filename="package://assets/bearing_plate.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link outer -->
+  <link name="outer">
+    <inertial>
+      <origin xyz="7.04841e-18 0.0210334 -0.0482655" rpy="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1.31716e-06" ixy="8.49114e-24" ixz="-3.54188e-26" iyy="1.2237e-06" iyz="-5.10439e-09" izz="1.32943e-07"/>
+    </inertial>
+    <!-- Part outer -->
+    <visual>
+      <origin xyz="-0.0454 0.00525 -0.046781" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/outer.stl"/>
+      </geometry>
+      <material name="outer_material">
+        <color rgba="0.0862745 0.317647 0.690196 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0454 0.00525 -0.046781" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/outer.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link backhand -->
+  <link name="backhand">
+    <inertial>
+      <origin xyz="-0.00992524 -0.0442501 -0.0432109" rpy="0 0 0"/>
+      <mass value="0.006"/>
+      <inertia ixx="7.43713e-06" ixy="-6.1378e-07" ixz="-4.05687e-07" iyy="5.12829e-06" iyz="-2.87959e-06" izz="8.08209e-06"/>
+    </inertial>
+    <!-- Part backhand -->
+    <visual>
+      <origin xyz="-0.0208387 -0.0956126 -0.0690672" rpy="2.47013 -2.22305e-15 3.04882"/>
+      <geometry>
+        <mesh filename="package://assets/backhand.stl"/>
+      </geometry>
+      <material name="backhand_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0208387 -0.0956126 -0.0690672" rpy="2.47013 -2.22305e-15 3.04882"/>
+      <geometry>
+        <mesh filename="package://assets/backhand.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part front_palm -->
+    <visual>
+      <origin xyz="-0.0208387 -0.0956126 -0.0690672" rpy="2.47013 -2.59601e-15 3.04882"/>
+      <geometry>
+        <mesh filename="package://assets/front_palm.stl"/>
+      </geometry>
+      <material name="front_palm_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0208387 -0.0956126 -0.0690672" rpy="2.47013 -2.59601e-15 3.04882"/>
+      <geometry>
+        <mesh filename="package://assets/front_palm.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part part_1 -->
+    <visual>
+      <origin xyz="-1.17961e-16 1.31839e-16 -0.025" rpy="-1.47802 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/part_1.stl"/>
+      </geometry>
+      <material name="part_1_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-1.17961e-16 1.31839e-16 -0.025" rpy="-1.47802 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/part_1.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part thumb_attachment -->
+    <visual>
+      <origin xyz="-0.0208538 -0.0956501 -0.0690184" rpy="2.47013 -3.26301e-15 3.04882"/>
+      <geometry>
+        <mesh filename="package://assets/thumb_attachment.stl"/>
+      </geometry>
+      <material name="thumb_attachment_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0208538 -0.0956501 -0.0690184" rpy="2.47013 -3.26301e-15 3.04882"/>
+      <geometry>
+        <mesh filename="package://assets/thumb_attachment.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part palm -->
+    <visual>
+      <origin xyz="-0.0208538 -0.0956501 -0.0690184" rpy="2.47013 -3.45817e-15 3.04882"/>
+      <geometry>
+        <mesh filename="package://assets/palm.stl"/>
+      </geometry>
+      <material name="palm_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0208538 -0.0956501 -0.0690184" rpy="2.47013 -3.45817e-15 3.04882"/>
+      <geometry>
+        <mesh filename="package://assets/palm.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part wrist_connector_bend -->
+    <visual>
+      <origin xyz="-0.0208387 -0.0956126 -0.0690672" rpy="2.47013 -1.92988e-15 3.04882"/>
+      <geometry>
+        <mesh filename="package://assets/wrist_connector_bend.stl"/>
+      </geometry>
+      <material name="wrist_connector_bend_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0208387 -0.0956126 -0.0690672" rpy="2.47013 -1.92988e-15 3.04882"/>
+      <geometry>
+        <mesh filename="package://assets/wrist_connector_bend.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link knuclke_index_ext -->
+  <link name="knuclke_index_ext">
+    <inertial>
+      <origin xyz="-0.00174312 -0.00118773 -0.00872925" rpy="0 0 0"/>
+      <mass value="0.003"/>
+      <inertia ixx="1.5748e-07" ixy="-2.37555e-08" ixz="-1.03937e-08" iyy="1.81283e-07" iyz="-6.78847e-09" izz="8.20582e-08"/>
+    </inertial>
+    <!-- Part knuclke_index_ext -->
+    <visual>
+      <origin xyz="-0.0150985 0.0156947 -0.0159484" rpy="3.38941e-15 0.0436332 -1.12955"/>
+      <geometry>
+        <mesh filename="package://assets/knuclke_index_ext.stl"/>
+      </geometry>
+      <material name="knuclke_index_ext_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0150985 0.0156947 -0.0159484" rpy="3.38941e-15 0.0436332 -1.12955"/>
+      <geometry>
+        <mesh filename="package://assets/knuclke_index_ext.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part cap -->
+    <visual>
+      <origin xyz="0.0282277 0.00828809 -0.0148" rpy="3.14159 5.10703e-15 -2.01926"/>
+      <geometry>
+        <mesh filename="package://assets/cap.stl"/>
+      </geometry>
+      <material name="cap_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0282277 0.00828809 -0.0148" rpy="3.14159 5.10703e-15 -2.01926"/>
+      <geometry>
+        <mesh filename="package://assets/cap.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part cap_2 -->
+    <visual>
+      <origin xyz="-0.0197075 -0.0218428 -0.002" rpy="2.77556e-17 -5.55112e-17 0"/>
+      <geometry>
+        <mesh filename="package://assets/cap.stl"/>
+      </geometry>
+      <material name="cap_2_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0197075 -0.0218428 -0.002" rpy="2.77556e-17 -5.55112e-17 0"/>
+      <geometry>
+        <mesh filename="package://assets/cap.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link mcp -->
+  <link name="mcp">
+    <inertial>
+      <origin xyz="-0.0167147 -0.00133536 0.00450002" rpy="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="4.31278e-08" ixy="-2.8728e-10" ixz="2.10316e-13" iyy="1.28608e-07" iyz="1.55801e-13" izz="1.09528e-07"/>
+    </inertial>
+    <!-- Part mcp -->
+    <visual>
+      <origin xyz="-0.0455917 -0.00510811 0.0045" rpy="-1.5708 1.94289e-16 1.38778e-17"/>
+      <geometry>
+        <mesh filename="package://assets/mcp.stl"/>
+      </geometry>
+      <material name="mcp_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0455917 -0.00510811 0.0045" rpy="-1.5708 1.94289e-16 1.38778e-17"/>
+      <geometry>
+        <mesh filename="package://assets/mcp.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link pip -->
+  <link name="pip">
+    <inertial>
+      <origin xyz="-0.0107299 0.000625775 -0.00445004" rpy="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="3.60006e-08" ixy="-3.24728e-09" ixz="8.22028e-13" iyy="9.31316e-08" iyz="2.67571e-13" izz="8.50752e-08"/>
+    </inertial>
+    <!-- Part pip -->
+    <visual>
+      <origin xyz="-0.0113 0.00464338 -0.00445" rpy="1.5708 7.57727e-15 4.16334e-16"/>
+      <geometry>
+        <mesh filename="package://assets/pip.stl"/>
+      </geometry>
+      <material name="pip_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0113 0.00464338 -0.00445" rpy="1.5708 7.57727e-15 4.16334e-16"/>
+      <geometry>
+        <mesh filename="package://assets/pip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link finger___joint_3 -->
+  <link name="finger___joint_3">
+    <inertial>
+      <origin xyz="-0.0130533 -0.00240115 -0.00430199" rpy="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="3.13691e-08" ixy="-3.25021e-09" ixz="2.80966e-11" iyy="9.25485e-08" iyz="4.94645e-12" izz="8.10791e-08"/>
+    </inertial>
+    <!-- Part finger___joint_3 -->
+    <visual>
+      <origin xyz="0.0142 -0.00558667 -0.0043" rpy="-1.5708 2.77556e-17 0"/>
+      <geometry>
+        <mesh filename="package://assets/finger___joint_3.stl"/>
+      </geometry>
+      <material name="finger___joint_3_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0142 -0.00558667 -0.0043" rpy="-1.5708 2.77556e-17 0"/>
+      <geometry>
+        <mesh filename="package://assets/finger___joint_3.stl"/>
+      </geometry>
+    </collision>
+     <visual>
+        <origin xyz="-0.022 -0.002 -0.004" rpy="0 0 0"/>
+        <geometry>
+            <sphere radius="0.001"/>
+        </geometry>
+        <material name="red"/>
+    </visual>
+  </link>
+  <!-- Joint from pip to finger___joint_3 -->
+  <joint name="index_dip" type="revolute">
+    <origin xyz="-0.0255 -0.000943294 -0.00875" rpy="-3.14159 5.32907e-15 -6.93889e-16"/>
+    <parent link="pip"/>
+    <child link="finger___joint_3"/>
+    <axis xyz="0 0 -1"/>
+    <limit effort="10" velocity="10" lower="0" upper="2.0944"/>
+  </joint>
+  <!-- Joint from mcp to pip -->
+  <joint name="index_pip" type="revolute">
+    <origin xyz="-0.0342917 -0.000464732 5e-05" rpy="3.14159 -1.66533e-16 2.77556e-17"/>
+    <parent link="mcp"/>
+    <child link="pip"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="0" upper="1.91986"/>
+  </joint>
+  <!-- Joint from knuclke_index_ext to mcp -->
+  <joint name="index_mcp" type="revolute">
+    <origin xyz="-0.00744734 -0.00999639 -0.0134138" rpy="-1.5708 -0.536191 0.561167"/>
+    <parent link="knuclke_index_ext"/>
+    <child link="mcp"/>
+    <axis xyz="0 0 -1"/>
+    <limit effort="10" velocity="10" lower="0" upper="1.91986"/>
+  </joint>
+  <!-- Joint from backhand to knuclke_index_ext -->
+  <joint name="index_splay" type="revolute">
+    <origin xyz="-0.0371598 -0.0783979 -0.0780332" rpy="2.74947 -0.561588 2.06824"/>
+    <parent link="backhand"/>
+    <child link="knuclke_index_ext"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0.191799" upper="0.201799"/>
+  </joint>
+  <!-- Link mcp_2 -->
+  <link name="mcp_2">
+    <inertial>
+      <origin xyz="-0.0167147 0.00133536 0.00449998" rpy="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="4.31278e-08" ixy="2.8728e-10" ixz="-2.10316e-13" iyy="1.28608e-07" iyz="1.55801e-13" izz="1.09528e-07"/>
+    </inertial>
+    <!-- Part mcp_2 -->
+    <visual>
+      <origin xyz="-0.0455917 0.00510811 0.0045" rpy="1.5708 1.94289e-16 -8.67362e-19"/>
+      <geometry>
+        <mesh filename="package://assets/mcp.stl"/>
+      </geometry>
+      <material name="mcp_2_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0455917 0.00510811 0.0045" rpy="1.5708 1.94289e-16 -8.67362e-19"/>
+      <geometry>
+        <mesh filename="package://assets/mcp.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link pip_2 -->
+  <link name="pip_2">
+    <inertial>
+      <origin xyz="-0.0107299 -0.000625775 -0.00424996" rpy="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="3.60006e-08" ixy="3.24728e-09" ixz="-8.22028e-13" iyy="9.31316e-08" iyz="2.67571e-13" izz="8.50752e-08"/>
+    </inertial>
+    <!-- Part pip_2 -->
+    <visual>
+      <origin xyz="-0.0113 -0.00464338 -0.00425" rpy="-1.5708 -3.46945e-16 -2.77556e-17"/>
+      <geometry>
+        <mesh filename="package://assets/pip.stl"/>
+      </geometry>
+      <material name="pip_2_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0113 -0.00464338 -0.00425" rpy="-1.5708 -3.46945e-16 -2.77556e-17"/>
+      <geometry>
+        <mesh filename="package://assets/pip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link finger___joint_3_2 -->
+  <link name="finger___joint_3_2">
+    <inertial>
+      <origin xyz="-0.0130533 0.00240115 -0.00429801" rpy="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="3.13691e-08" ixy="3.25021e-09" ixz="-2.80966e-11" iyy="9.25485e-08" iyz="4.94645e-12" izz="8.10791e-08"/>
+    </inertial>
+    <!-- Part finger___joint_3_2 -->
+    <visual>
+      <origin xyz="0.0142 0.00558667 -0.0043" rpy="1.5708 4.16334e-17 2.77556e-17"/>
+      <geometry>
+        <mesh filename="package://assets/finger___joint_3.stl"/>
+      </geometry>
+      <material name="finger___joint_3_2_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0142 0.00558667 -0.0043" rpy="1.5708 4.16334e-17 2.77556e-17"/>
+      <geometry>
+        <mesh filename="package://assets/finger___joint_3.stl"/>
+      </geometry>
+    </collision>
+        <visual>
+        <origin xyz="-0.02 0.002 -0.004" rpy="0 0 0"/>
+        <geometry>
+            <sphere radius="0.001"/>
+        </geometry>
+        <material name="red"/>
+    </visual>
+  </link>
+  <!-- Joint from pip_2 to finger___joint_3_2 -->
+  <joint name="mid_dip" type="revolute">
+    <origin xyz="-0.0255 0.000943294 -0.00855" rpy="3.14159 -1.47798e-14 -0.0381857"/>
+    <parent link="pip_2"/>
+    <child link="finger___joint_3_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="0" upper="2.0944"/>
+  </joint>
+  <!-- Joint from mcp_2 to pip_2 -->
+  <joint name="mid_pip" type="revolute">
+    <origin xyz="-0.0342917 0.000464732 0.00025" rpy="3.14159 -6.10623e-16 0.147354"/>
+    <parent link="mcp_2"/>
+    <child link="pip_2"/>
+    <axis xyz="0 0 -1"/>
+    <limit effort="10" velocity="10" lower="0" upper="1.91986"/>
+  </joint>
+  <!-- Joint from backhand to mcp_2 -->
+  <joint name="mid_mcp" type="revolute">
+    <origin xyz="-0.0163656 -0.0982207 -0.0763958" rpy="-1.60501 -0.0577797 1.45284"/>
+    <parent link="backhand"/>
+    <child link="mcp_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0.2" upper="1.91986"/>
+  </joint>
+  <!-- Link knuckle_ring_ext -->
+  <link name="knuckle_ring_ext">
+    <inertial>
+      <origin xyz="-0.00174313 -0.00118772 0.00672924" rpy="0 0 0"/>
+      <mass value="0.003"/>
+      <inertia ixx="1.5748e-07" ixy="-2.37558e-08" ixz="1.03937e-08" iyy="1.81283e-07" iyz="6.78909e-09" izz="8.20585e-08"/>
+    </inertial>
+    <!-- Part cap_3 -->
+    <visual>
+      <origin xyz="-0.0197075 -0.0218428 -0.002" rpy="5.55112e-17 -5.55112e-17 5.55112e-17"/>
+      <geometry>
+        <mesh filename="package://assets/cap.stl"/>
+      </geometry>
+      <material name="cap_3_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0197075 -0.0218428 -0.002" rpy="5.55112e-17 -5.55112e-17 5.55112e-17"/>
+      <geometry>
+        <mesh filename="package://assets/cap.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part knuckle_ring_ext -->
+    <visual>
+      <origin xyz="0.0249452 -0.0480106 0.0139484" rpy="-3.14159 -0.0436332 2.25189"/>
+      <geometry>
+        <mesh filename="package://assets/knuckle_ring_ext.stl"/>
+      </geometry>
+      <material name="knuckle_ring_ext_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0249452 -0.0480106 0.0139484" rpy="-3.14159 -0.0436332 2.25189"/>
+      <geometry>
+        <mesh filename="package://assets/knuckle_ring_ext.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part cap_4 -->
+    <visual>
+      <origin xyz="-0.0197075 -0.0218428 0.0128" rpy="4.44089e-16 4.44089e-16 -1.05471e-15"/>
+      <geometry>
+        <mesh filename="package://assets/cap.stl"/>
+      </geometry>
+      <material name="cap_4_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0197075 -0.0218428 0.0128" rpy="4.44089e-16 4.44089e-16 -1.05471e-15"/>
+      <geometry>
+        <mesh filename="package://assets/cap.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link mcp_3 -->
+  <link name="mcp_3">
+    <inertial>
+      <origin xyz="0.0167664 -0.000232235 0.00429998" rpy="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="4.34605e-08" ixy="-5.32968e-09" ixz="2.20115e-13" iyy="1.28276e-07" iyz="-1.41619e-13" izz="1.09528e-07"/>
+    </inertial>
+    <!-- Part mcp_3 -->
+    <visual>
+      <origin xyz="0.045829 -0.002096 0.0043" rpy="1.5708 9.73527e-15 -3.07572"/>
+      <geometry>
+        <mesh filename="package://assets/mcp.stl"/>
+      </geometry>
+      <material name="mcp_3_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.045829 -0.002096 0.0043" rpy="1.5708 9.73527e-15 -3.07572"/>
+      <geometry>
+        <mesh filename="package://assets/mcp.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link pip_3 -->
+  <link name="pip_3">
+    <inertial>
+      <origin xyz="-0.0107299 0.000625775 -0.00425004" rpy="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="3.60006e-08" ixy="-3.24728e-09" ixz="8.22028e-13" iyy="9.31316e-08" iyz="2.67571e-13" izz="8.50752e-08"/>
+    </inertial>
+    <!-- Part pip_3 -->
+    <visual>
+      <origin xyz="-0.0113 0.00464338 -0.00425" rpy="1.5708 -3.33067e-16 -2.77556e-17"/>
+      <geometry>
+        <mesh filename="package://assets/pip.stl"/>
+      </geometry>
+      <material name="pip_3_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0113 0.00464338 -0.00425" rpy="1.5708 -3.33067e-16 -2.77556e-17"/>
+      <geometry>
+        <mesh filename="package://assets/pip.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link finger___joint_3_3 -->
+  <link name="finger___joint_3_3">
+    <inertial>
+      <origin xyz="-0.0130533 0.00240115 -0.00429801" rpy="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="3.13691e-08" ixy="3.25021e-09" ixz="-2.80966e-11" iyy="9.25485e-08" iyz="4.94645e-12" izz="8.10791e-08"/>
+    </inertial>
+    <!-- Part finger___joint_3_3 -->
+    <visual>
+      <origin xyz="0.0142 0.00558667 -0.0043" rpy="1.5708 -0 2.77556e-17"/>
+      <geometry>
+        <mesh filename="package://assets/finger___joint_3.stl"/>
+      </geometry>
+      <material name="finger___joint_3_3_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0142 0.00558667 -0.0043" rpy="1.5708 -0 2.77556e-17"/>
+      <geometry>
+        <mesh filename="package://assets/finger___joint_3.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.02 0.002 -0.004" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.001"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+  <!-- Joint from pip_3 to finger___joint_3_3 -->
+  <joint name="ring_dip" type="revolute">
+    <origin xyz="-0.0255 -0.000943294 5e-05" rpy="1.94289e-15 -7.13318e-15 1.66533e-16"/>
+    <parent link="pip_3"/>
+    <child link="finger___joint_3_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="0" upper="2.0944"/>
+  </joint>
+  <!-- Joint from mcp_3 to pip_3 -->
+  <joint name="ring_pip" type="revolute">
+    <origin xyz="0.0342479 0.00179349 0.00855" rpy="-2.73132e-15 5.55112e-15 -3.07572"/>
+    <parent link="mcp_3"/>
+    <child link="pip_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="0" upper="1.91986"/>
+  </joint>
+  <!-- Joint from knuckle_ring_ext to mcp_3 -->
+  <joint name="ring_mcp" type="revolute">
+    <origin xyz="-0.00755378 -0.00982706 0.0114138" rpy="1.5708 -0.349927 -2.58043"/>
+    <parent link="knuckle_ring_ext"/>
+    <child link="mcp_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="0" upper="1.91986"/>
+  </joint>
+  <!-- Joint from backhand to knuckle_ring_ext -->
+  <joint name="ring_splay" type="revolute">
+    <origin xyz="0.000394141 -0.0834707 -0.0760888" rpy="0.286322 -0.618371 0.917012"/>
+    <parent link="backhand"/>
+    <child link="knuckle_ring_ext"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0.301426" upper="0.301426"/>
+  </joint>
+  <!-- Link knuckle_ring_ext_2 -->
+  <link name="knuckle_ring_ext_2">
+    <inertial>
+      <origin xyz="0.00174313 0.00118772 0.00672924" rpy="0 0 0"/>
+      <mass value="0.003"/>
+      <inertia ixx="1.5748e-07" ixy="-2.37558e-08" ixz="-1.03937e-08" iyy="1.81283e-07" iyz="-6.78909e-09" izz="8.20585e-08"/>
+    </inertial>
+    <!-- Part cap_5 -->
+    <visual>
+      <origin xyz="-0.0197075 -0.0218428 -0.002" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/cap.stl"/>
+      </geometry>
+      <material name="cap_5_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0197075 -0.0218428 -0.002" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/cap.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part cap_6 -->
+    <visual>
+      <origin xyz="0.0282277 0.00828809 0.0148" rpy="-3.14159 4.27436e-15 -2.01926"/>
+      <geometry>
+        <mesh filename="package://assets/cap.stl"/>
+      </geometry>
+      <material name="cap_6_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0282277 0.00828809 0.0148" rpy="-3.14159 4.27436e-15 -2.01926"/>
+      <geometry>
+        <mesh filename="package://assets/cap.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part knuckle_ring_ext_2 -->
+    <visual>
+      <origin xyz="-0.0249452 0.0480106 0.0139484" rpy="-3.14159 -0.0436332 -0.889705"/>
+      <geometry>
+        <mesh filename="package://assets/knuckle_ring_ext.stl"/>
+      </geometry>
+      <material name="knuckle_ring_ext_2_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0249452 0.0480106 0.0139484" rpy="-3.14159 -0.0436332 -0.889705"/>
+      <geometry>
+        <mesh filename="package://assets/knuckle_ring_ext.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link mcp_4 -->
+  <link name="mcp_4">
+    <inertial>
+      <origin xyz="0.0167656 -0.00028127 0.00429998" rpy="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="4.343e-08" ixy="-5.08154e-09" ixz="2.197e-13" iyy="1.28306e-07" iyz="-1.42262e-13" izz="1.09528e-07"/>
+    </inertial>
+    <!-- Part mcp_4 -->
+    <visual>
+      <origin xyz="0.0458227 -0.00223002 0.0043" rpy="1.5708 -4.05231e-15 -3.07865"/>
+      <geometry>
+        <mesh filename="package://assets/mcp.stl"/>
+      </geometry>
+      <material name="mcp_4_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0458227 -0.00223002 0.0043" rpy="1.5708 -4.05231e-15 -3.07865"/>
+      <geometry>
+        <mesh filename="package://assets/mcp.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link pinky___joint_2 -->
+  <link name="pinky___joint_2">
+    <inertial>
+      <origin xyz="-0.00922462 0.000836592 -0.00425004" rpy="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="3.41714e-08" ixy="-3.1164e-09" ixz="5.16547e-13" iyy="8.29513e-08" iyz="2.6448e-13" izz="7.49492e-08"/>
+    </inertial>
+    <!-- Part pinky___joint_2 -->
+    <visual>
+      <origin xyz="-0.0098 0.00464338 -0.00425" rpy="1.5708 -3.40006e-16 -2.77556e-17"/>
+      <geometry>
+        <mesh filename="package://assets/pinky___joint_2.stl"/>
+      </geometry>
+      <material name="pinky___joint_2_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0098 0.00464338 -0.00425" rpy="1.5708 -3.40006e-16 -2.77556e-17"/>
+      <geometry>
+        <mesh filename="package://assets/pinky___joint_2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link pinky___joint_3 -->
+  <link name="pinky___joint_3">
+    <inertial>
+      <origin xyz="-0.0107976 0.00220971 -0.00449766" rpy="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="3.16156e-08" ixy="2.09117e-09" ixz="-2.71021e-11" iyy="7.46219e-08" iyz="5.39463e-12" izz="6.31453e-08"/>
+    </inertial>
+    <!-- Part pinky___joint_3 -->
+    <visual>
+      <origin xyz="0.0127 0.00558667 -0.0045" rpy="1.5708 2.01922e-15 4.996e-16"/>
+      <geometry>
+        <mesh filename="package://assets/pinky___joint_3.stl"/>
+      </geometry>
+      <material name="pinky___joint_3_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0127 0.00558667 -0.0045" rpy="1.5708 2.01922e-15 4.996e-16"/>
+      <geometry>
+        <mesh filename="package://assets/pinky___joint_3.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="-0.017 0.002 -0.004" rpy="0 0 0"/>
+      <geometry>
+        <sphere radius="0.001"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+  <!-- Joint from pinky___joint_2 to pinky___joint_3 -->
+  <joint name="pinky_dip" type="revolute">
+    <origin xyz="-0.0225 -0.000943294 0.00025" rpy="2.08167e-17 -7.63278e-17 -2.77556e-17"/>
+    <parent link="pinky___joint_2"/>
+    <child link="pinky___joint_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="0" upper="1.91986"/>
+  </joint>
+  <!-- Joint from mcp_4 to pinky___joint_2 -->
+  <joint name="pinky_pip" type="revolute">
+    <origin xyz="0.034253 0.00169332 0.00855" rpy="-1.25178e-14 -5.4956e-15 -3.07865"/>
+    <parent link="mcp_4"/>
+    <child link="pinky___joint_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="0" upper="1.91986"/>
+  </joint>
+  <!-- Joint from knuckle_ring_ext_2 to mcp_4 -->
+  <joint name="pinky_mcp" type="revolute">
+    <origin xyz="0.00755378 0.00982706 0.0114138" rpy="1.5708 -0.349927 0.561167"/>
+    <parent link="knuckle_ring_ext_2"/>
+    <child link="mcp_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="0" upper="2.0944"/>
+  </joint>
+  <!-- Joint from backhand to knuckle_ring_ext_2 -->
+  <joint name="pinky_splay" type="revolute">
+    <origin xyz="0.0224606 -0.0838956 -0.0700717" rpy="-0.203681 0.653612 -2.17909"/>
+    <parent link="backhand"/>
+    <child link="knuckle_ring_ext_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0.298132" upper="0.598132"/>
+  </joint>
+  <!-- Link thumb___joint_1 -->
+  <link name="thumb___joint_1">
+    <inertial>
+      <origin xyz="0.0124048 -0.0114199 -0.0137096" rpy="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1.12112e-07" ixy="3.6972e-08" ixz="2.03198e-10" iyy="1.04524e-07" iyz="-2.39803e-10" izz="1.05916e-07"/>
+    </inertial>
+    <!-- Part thumb___joint_1 -->
+    <visual>
+      <origin xyz="0.00627765 0.00410379 -0.00895" rpy="1.5708 -1.40998e-14 -0.991815"/>
+      <geometry>
+        <mesh filename="package://assets/thumb___joint_1.stl"/>
+      </geometry>
+      <material name="thumb___joint_1_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.00627765 0.00410379 -0.00895" rpy="1.5708 -1.40998e-14 -0.991815"/>
+      <geometry>
+        <mesh filename="package://assets/thumb___joint_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link thumb___joint_2 -->
+  <link name="thumb___joint_2">
+    <inertial>
+      <origin xyz="0.00894135 0.00971579 -0.00441599" rpy="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="7.27281e-08" ixy="-2.65622e-08" ixz="-6.7566e-09" iyy="5.79441e-08" iyz="4.89482e-09" izz="9.32173e-08"/>
+    </inertial>
+    <!-- Part thumb___joint_2 -->
+    <visual>
+      <origin xyz="0.0106413 0.00793198 -0.00692487" rpy="0.785398 -5.16254e-15 -2.23347"/>
+      <geometry>
+        <mesh filename="package://assets/thumb___joint_2.stl"/>
+      </geometry>
+      <material name="thumb___joint_2_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0106413 0.00793198 -0.00692487" rpy="0.785398 -5.16254e-15 -2.23347"/>
+      <geometry>
+        <mesh filename="package://assets/thumb___joint_2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link thumb___joint_3 -->
+  <link name="thumb___joint_3">
+    <inertial>
+      <origin xyz="-0.0123738 0.00242082 -0.00529725" rpy="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="3.53538e-08" ixy="3.10694e-09" ixz="-2.61885e-11" iyy="8.9079e-08" iyz="3.21538e-12" izz="7.39281e-08"/>
+    </inertial>
+    <!-- Part thumb___joint_3 -->
+    <visual>
+      <origin xyz="0.0157 0.00558667 -0.0053" rpy="1.5708 2.77556e-17 5.55112e-17"/>
+      <geometry>
+        <mesh filename="package://assets/thumb___joint_3.stl"/>
+      </geometry>
+      <material name="thumb___joint_3_material">
+        <color rgba="0.439216 0.47451 0.501961 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0157 0.00558667 -0.0053" rpy="1.5708 2.77556e-17 5.55112e-17"/>
+      <geometry>
+        <mesh filename="package://assets/thumb___joint_3.stl"/>
+      </geometry>
+    </collision>
+    <visual>
+    <origin xyz="-0.018 0.0025 -0.005" rpy="0 0 0"/>
+    <geometry>
+      <sphere radius="0.001"/>
+    </geometry>
+    <material name="red"/>
+  </visual>
+  </link>
+  <!-- Joint from thumb___joint_2 to thumb___joint_3 -->
+  <joint name="thumb_ip" type="revolute">
+    <origin xyz="0.0201406 0.0204338 0.000773164" rpy="-0.785398 -6.60583e-15 -2.23347"/>
+    <parent link="thumb___joint_2"/>
+    <child link="thumb___joint_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="0" upper="1.91986"/>
+  </joint>
+  <!-- Joint from thumb___joint_1 to thumb___joint_2 -->
+  <joint name="thumb_mcp" type="revolute">
+    <origin xyz="0.019222 -0.0282163 -0.0118502" rpy="1.5708 -1.40998e-14 -0.991815"/>
+    <parent link="thumb___joint_1"/>
+    <child link="thumb___joint_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0.77" upper="0.7"/>
+  </joint>
+  <!-- Joint from backhand to thumb___joint_1 -->
+  <joint name="thumb_cmc" type="revolute">
+    <origin xyz="-0.0398418 -0.0639116 -0.0408336" rpy="-2.24226 -3.26301e-15 3.04882"/>
+    <parent link="backhand"/>
+    <child link="thumb___joint_1"/>
+    <axis xyz="0 0 -1"/>
+    <limit effort="10" velocity="10" lower="-0.7" upper="1.7"/>
+  </joint>
+  <!-- Joint from outer to backhand -->
+  <joint name="wrist_yaw" type="revolute">
+    <origin xyz="-6.93889e-18 0.025 -0.047" rpy="-1.5708 1.5708 0"/>
+    <parent link="outer"/>
+    <child link="backhand"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0.465732" upper="0.703638"/>
+  </joint>
+  <!-- Joint from base_new to outer -->
+  <joint name="base_pitch" type="revolute">
+    <origin xyz="0.044617 -0.0329859 0.042423" rpy="-1.5708 -1.51969 -1.5708"/>
+    <parent link="base_new"/>
+    <child link="outer"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0.661974" upper="0.647023"/>
+  </joint>
+  <!-- Link inner -->
+  <link name="inner">
+    <inertial>
+      <origin xyz="-0.000573884 0 -0.0146915" rpy="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1.89437e-07" ixy="1.9398e-23" ixz="7.04728e-09" iyy="6.98886e-07" iyz="-3.44577e-38" izz="5.49609e-07"/>
+    </inertial>
+    <!-- Part inner -->
+    <visual>
+      <origin xyz="-0.000218978 -0.0454 -0.04325" rpy="-4.93038e-32 7.39557e-32 0"/>
+      <geometry>
+        <mesh filename="package://assets/inner.stl"/>
+      </geometry>
+      <material name="inner_material">
+        <color rgba="0.0862745 0.317647 0.690196 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.000218978 -0.0454 -0.04325" rpy="-4.93038e-32 7.39557e-32 0"/>
+      <geometry>
+        <mesh filename="package://assets/inner.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from base_new to inner -->
+  <joint name="base_yaw" type="revolute">
+    <origin xyz="-0.00238299 0.00501408 0.042423" rpy="1.5708 0.132284 -3.14159"/>
+    <parent link="base_new"/>
+    <child link="inner"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0.478581" upper="0.690789"/>
+  </joint>
+
+  <link name="index_actual_tip">
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+  <joint name="index_actual_tip_joint" type="fixed">
+    <parent link="finger___joint_3"/> 
+    <child link="index_actual_tip"/>
+    <origin xyz="-0.007 0 -0.004" rpy="0 0 0"/>
+  </joint>
+
+  <link name="middle_actual_tip">
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+  <joint name="middle_actual_tip_joint" type="fixed">
+    <parent link="finger___joint_3_2"/> 
+    <child link="middle_actual_tip"/>
+    <origin xyz="-0.005 0.002 -0.004" rpy="0 0 0"/>
+  </joint>
+
+  <link name="ring_actual_tip">
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+  <joint name="ring_actual_tip_joint" type="fixed">
+    <parent link="finger___joint_3_3"/> 
+    <child link="ring_actual_tip"/>
+    <origin xyz="-0.015 0.002 -0.004" rpy="0 0 0"/>
+  </joint>
+
+  <link name="pinky_actual_tip">
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+  <joint name="pinky_actual_tip_joint" type="fixed">
+    <parent link="pinky___joint_3"/> 
+    <child link="pinky_actual_tip"/>
+    <origin xyz="-0.012 0.002 -0.004" rpy="0 0 0"/>
+  </joint>
+
+  <link name="thumb_actual_tip">
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+  <joint name="thumb_actual_tip_joint" type="fixed">
+    <parent link="thumb___joint_3"/> 
+    <child link="thumb_actual_tip"/>
+    <origin xyz="-0.017 0.0025 -0.005" rpy="0 0 0"/>
+  </joint>
+
+  
+</robot>
