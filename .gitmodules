@@ -1,0 +1,12 @@
+[submodule "franka-teach-single"]
+	path = franka-teach-single
+	url = https://github.com/pianapolataa/Franka-Teach.git
+	branch = main
+
+[submodule "franka-teach-bimanual"]
+	path = franka-teach-bimanual
+	url = https://github.com/pianapolataa/Franka-Teach.git
+	branch = bimanual
+[submodule "BAKU"]
+	path = BAKU
+	url = https://github.com/pianapolataa/BAKU.git
