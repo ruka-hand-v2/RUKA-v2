@@ -17,3 +17,50 @@
 </div>
 
 #####
+
+## Installation
+Download the repo, create the conda environment, install requirements and install the `ruka_hand` package.
+```
+git clone --recurse-submodules https://github.com/ruka-hand-v2/RUKA-v2
+cd RUKA-v2
+conda env create -f environment.yml
+conda activate ruka_hand
+pip install -r requirements.txt
+pip install -e .
+```
+
+
+### Connecting RUKA
+Connect the RUKA hand to your workstation using a USB cable. Then, identify which port the USB is connected to. You can do this by plugging and unplugging the hand while observing the changes in the output of `ls /dev/ttyUSB*`. The port that appears when you plug in the hand corresponds to that hand (left or right).
+Update the `USB_PORTS` dictionary in `ruka_hand/utils/constants.py` accordingly, e.g., `USB_PORTS = {"left": "/dev/ttyUSB0", "right": "/dev/ttyUSB1"}`.
+
+You can try moving the motors to the reset position by running:
+```
+python scripts/reset_motors.py --hand_type <right|left>
+```
+If this moves the intended hand then it means that the initial software is completed!
+
+**NOTE:**
+If you get an error saying that 
+```
+serial.serialutil.SerialException: [Errno 13] could not open port /dev/ttyUSB0: [Errno 13] Permission denied: '/dev/ttyUSB0'
+```
+You might need to run following commands to add your user to `dialout` group and reboot the machine for it to take effect.
+```
+sudo usermod -aG dialout $USER
+sudo reboot
+```
+
+### Calibrating Motor Ranges
+Since RUKA is a tendon-driven hand, cable tensions can vary between different builds. To ensure consistency across builds, we provide a calibration script that determines the motor ranges by finding the fully curled finger bound and the in-tension bound (finger is fully open and the tendon is in tension).
+Run the following command to save the motor limits to `RUKA/motor_limits/<left|right>_<tension|curl>_limits.npy`:  
+```
+python calibrate_motors.py --hand-type <left|right>
+```
+These motor limits are later used in `ruka_hand/control/hand.py`.
+
+During calibration, you will be prompted to move the joints individually using the ↑/↓ keys to increase or decrease the motor commands, and to press enter when a desired positon is reached. Make sure to identify which motor is moved and ensure that the string is tensioned when moving to the open position. Joints 14 and 15 should be the wrist joints, which are not tendon-driven and therefore require manual calibration to ensure safety. Find the limits using Dynamixel and enter them when prompted at the end of the script.
+
+When moving joints, we sometimes observe that the knuckle joints don't fully curl. If you notice this behavior (for example, the index finger not fully curling despite changing the motor command, please gently push the finger to complete the curl.
+
+After running the calibration, execute `python scripts/reset_motors.py --hand-type <right|left>`. This should move the fingers to a fully open position, with the tendons tensioned but the fingers remaining extended.
