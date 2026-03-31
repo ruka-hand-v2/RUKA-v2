@@ -59,7 +59,7 @@ python calibrate_motors.py --hand-type <left|right>
 ```
 These motor limits are later used in `ruka_hand/control/hand.py`.
 
-During calibration, you will be prompted to move the joints individually using the ↑/↓ keys to increase or decrease the motor commands, and to press enter when a desired positon is reached. Make sure to identify which motor is moved and ensure that the string is tensioned when moving to the open position. Joints 14 and 15 should be the wrist joints, which are not tendon-driven and therefore require manual calibration to ensure safety. Find the limits using Dynamixel and enter them when prompted at the end of the script.
+During calibration, you will be prompted to move the joints individually using the ↑/↓ keys to increase or decrease the motor commands, and to press enter when a desired positon is reached. Make sure to identify which motor is moved and ensure that the string is tensioned when moving to the open position. 
 
 When moving joints, we sometimes observe that the knuckle joints don't fully curl. If you notice this behavior (for example, the index finger not fully curling despite changing the motor command, please gently push the finger to complete the curl.
 
