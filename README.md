@@ -30,8 +30,8 @@ pip install -e .
 ```
 
 
-### Connecting RUKA
-Connect the RUKA hand to your workstation using a USB cable. Then, identify which port the USB is connected to. You can do this by plugging and unplugging the hand while observing the changes in the output of `ls /dev/ttyUSB*`. The port that appears when you plug in the hand corresponds to that hand (left or right).
+### Connecting RUKA-v2
+Connect the RUKA-v2 hand to your workstation using a USB cable. Then, identify which port the USB is connected to. You can do this by plugging and unplugging the hand while observing the changes in the output of `ls /dev/ttyUSB*`. The port that appears when you plug in the hand corresponds to that hand (left or right).
 Update the `USB_PORTS` dictionary in `ruka_hand/utils/constants.py` accordingly, e.g., `USB_PORTS = {"left": "/dev/ttyUSB0", "right": "/dev/ttyUSB1"}`.
 
 You can try moving the motors to the reset position by running:
@@ -52,7 +52,7 @@ sudo reboot
 ```
 
 ### Calibrating Motor Ranges
-Since RUKA is a tendon-driven hand, cable tensions can vary between different builds. To ensure consistency across builds, we provide a calibration script that determines the motor ranges by finding the fully curled finger bound and the in-tension bound (finger is fully open and the tendon is in tension).
+Since RUKA-v2 is a tendon-driven hand, cable tensions can vary between different builds. To ensure consistency across builds, we provide a calibration script that determines the motor ranges by finding the fully curled finger bound and the in-tension bound (finger is fully open and the tendon is in tension).
 Run the following command to save the motor limits to `RUKA/motor_limits/<left|right>_<tension|curl>_limits.npy`:  
 ```
 python calibrate_motors.py --hand-type <left|right>
@@ -64,3 +64,20 @@ During calibration, you will be prompted to move the joints individually using t
 When moving joints, we sometimes observe that the knuckle joints don't fully curl. If you notice this behavior (for example, the index finger not fully curling despite changing the motor command, please gently push the finger to complete the curl.
 
 After running the calibration, execute `python scripts/reset_motors.py --hand-type <right|left>`. This should move the fingers to a fully open position, with the tendons tensioned but the fingers remaining extended.
+
+
+## Teleoperation
+
+We provide scripts to teleoperate RUKA-v2 using Mediapipe
+ ```
+  python teleop_mediapipe.py
+  ```
+And we provide controllers in `ruka_hand/control/controller_retarget.py` that can be used to teleoperate RUKA-v2 using the [Oculus headset](https://www.meta.com/quest/quest-3/). 
+
+## Franka-Teach
+We provide code for teleoperating the RUKA-v2 mounted on a 7-DOF Franka Arm with single arm and bimanual setups using Open-Teach in the submodules `franka-teach-single` and `franka-teach-bimanual`, please refer to documentation in the [Franka-Teach](https://github.com/pianapolataa/Franka-Teach/blob/main/README.md) submodules.
+
+## BAKU
+We provide code for training your own visual BC policy with RUKA-v2 using BAKU in the submodule `BAKU`. Please refer to documentation in the [BAKU](https://github.com/pianapolataa/BAKU/blob/main/Instructions.md) submodule.
+
+## Attachable Encoders
