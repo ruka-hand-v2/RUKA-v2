@@ -29,8 +29,7 @@ class HandCalibrator:
     def __init__(self, data_save_dir, hand_type):
         self.hand = Hand(hand_type)
         self.num_motors = 16
-        self.tendon_motor_ids = list(range(1, 15)) 
-        self.direct_motor_ids = [15, 16]
+        self.tendon_motor_ids = list(range(1, 17)) 
         
         self.curled_path = os.path.join(data_save_dir, f"{hand_type}_curl_limits.npy")
         self.tension_path = os.path.join(data_save_dir, f"{hand_type}_tension_limits.npy")
@@ -65,33 +64,17 @@ class HandCalibrator:
                 self.hand.set_pos(pos)
 
     def calibrate(self):
-        # Motors 1-14
         for mid in self.tendon_motor_ids:
             print(f"================ MOTOR {mid} ================")
-            self.final_curled[mid-1] = self.crawl_motor(mid, "CURLED")
-            self.final_tensioned[mid-1] = self.crawl_motor(mid, "TENSIONED")
+            self.final_curled[mid-1] = self.crawl_motor(mid, "CURLED/CLOSED")
+            self.final_tensioned[mid-1] = self.crawl_motor(mid, "TENSIONED/OPEN")
             
-            # Relax finger to open position
+            # Relax motor to open position
             pos = np.array(self.hand.read_pos())
             pos[mid-1] = self.final_tensioned[mid-1]
             self.hand.set_pos(pos)
 
-        # Motors 15-16
-        print("================ MOTORS 15 & 16 ================")
-        for mid in self.direct_motor_ids:
-            while True:
-                try:
-                    low = input(f"Motor {mid} LOWER (Open): ")
-                    high = input(f"Motor {mid} UPPER (Closed): ")
-                    self.final_tensioned[mid-1], self.final_curled[mid-1] = int(low), int(high)
-                    
-                    pos = np.array(self.hand.read_pos())
-                    pos[mid-1] = self.final_tensioned[mid-1]
-                    self.hand.set_pos(pos)
-                    break
-                except ValueError:
-                    print("Enter integers only.")
-
+        
         np.save(self.curled_path, self.final_curled)
         np.save(self.tension_path, self.final_tensioned)
         print(f"\nSaved 16 joints to:\n{self.curled_path}\n{self.tension_path}")
