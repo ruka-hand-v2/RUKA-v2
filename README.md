@@ -81,3 +81,11 @@ We provide code for teleoperating the RUKA-v2 mounted on a 7-DOF Franka Arm with
 We provide code for training your own visual BC policy with RUKA-v2 using BAKU in the submodule `BAKU`. Please refer to documentation in the [BAKU](https://github.com/pianapolataa/BAKU/blob/main/Instructions.md) submodule.
 
 ## Attachable Encoders
+For the attachable encoders setup and data collection, please see the [Attachable Encoders README](ruka_encoders/README.md).
+
+**Quick Start Commands:**
+```bash
+python calibration/recalibrate_limits.py --serial-port /dev/ttyACM0 --hand right
+python calibration/extract_filtered_limits.py
+python data_collection/random_joint_generator.py --points-per-joint 15 --wait-time 1.5
+```

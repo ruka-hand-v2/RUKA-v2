@@ -1,4 +1,4 @@
-"""extract_filtered_paper_limits.py
+"""extract_filtered_limits.py
 Reads CSV files from the Paper folder and calculates the commanded extremums,
 and applies a statistical median filter to the physical sensor output to
 eliminate false high-frequency peaks (noise).

@@ -13,7 +13,7 @@ Contains the code that runs on the microcontroller side to read the AS5600 senso
 ### 2. [calibration/](calibration/)
 Contains tools for defining the relationship between motor ticks and sensor degrees.
 - **`recalibrate_limits.py`**: An interactive script that moves each motor to its limits and prompts for manual joint movement to capture absolute physical boundaries.
-- **`extract_filtered_paper_limits.py`**: Processes calibration logs to generate a statistical "Ground Truth" mapping in a json format.
+- **`extract_filtered_limits.py`**: Processes calibration logs to generate a statistical "Ground Truth" mapping in a json format.
 - **`manually_filtered_paper_limits.json`**: The reference configuration file containing the finalized motor-to-sensor mappings and limit bounds.
 
 ### 3. [data_collection/](data_collection/)
@@ -39,7 +39,7 @@ python calibration/recalibrate_limits.py --serial-port /dev/ttyACM0 --hand right
 ### Step 3: Finalize the Mapping
 Run the extractor on your calibration logs to generate a noise-filtered JSON reference:
 ```bash
-python calibration/extract_filtered_paper_limits.py
+python calibration/extract_filtered_limits.py
 ```
 *Note: This will default to reading logs from calibration/recalibrate_limits_logs/ and outputting to calibration/manually_filtered_paper_limits.json.*
 
